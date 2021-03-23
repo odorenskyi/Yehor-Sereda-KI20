@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1312551290 source:d:\codeblocks\modulessereda\main.c
+
+1616522722 source:d:\codeblocks\modulessereda\main.cpp
+	<cmath>
+	"ModulesSereda.h"
+
+1616306686 d:\codeblocks\modulessereda\modulessereda.h
+
