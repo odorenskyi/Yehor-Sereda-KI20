@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1616305908 source:d:\codeblocks\modulessereda\main.cpp
+	<cmath>
+	"ModulesSereda.h"
+
+1616306686 d:\codeblocks\modulessereda\modulessereda.h
+
+1616522220 source:d:\codeblocks\modulessereda\module.cpp
+	<cmath>
+	"ModulesSereda.h"
+
+1616522464 source:d:\codeblocks\testdriver\main.cpp
+	<iostream>
+	"ModulesSereda.h"
+
+1616255242 d:\codeblocks\testdriver\modulessereda.h
+
