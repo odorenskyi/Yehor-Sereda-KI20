@@ -1,7 +1,8 @@
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
-#include "ModulesSereda.h" //–ü—ñ–ª–∫–ª—é—á–µ–Ω–Ω—è —Å—Ç–∞—Ç–∏—á–Ω–æ—ó –±—ñ–±–ª—ñ–æ—Ç–µ–∫–∏
+#include <clocale>
+#include "ModulesSereda.h"
 
 using namespace std;
 
@@ -14,27 +15,26 @@ int main()
 
     copyright_info();
 
-    cout << "–í–≤–µ–¥—ñ—Ç—å —á–∏—Å–ª–∞ —Ö —Ç–∞ z." << endl;
-    if(cin >> x >> z) // –í–∞–ª—ñ–¥–∞—Ü—ñ—è.
+    cout << "¬‚Â‰≥Ú¸ ˜ËÒÎ‡ ı Ú‡ z." << endl;
+    if(cin >> x >> z)
     {
-        cout << "–í–≤–µ–¥—ñ—Ç—å —Å–∏–º–≤–æ–ª–∏ a —Ç–∞ b." << endl;
+        cout << "¬‚Â‰≥Ú¸ ÒËÏ‚ÓÎË a Ú‡ b." << endl;
         cin >> a >> b;
 
-        cout << "–†–µ–∑—É–ª—å—Ç–∞—Ç –ª–æ–≥—ñ—á–Ω–æ–≥–æ –≤–∏—Ä–∞–∑—É = " << bool(a + 7 < abs(b - 5)) << endl;
-        cout << "–†–µ–∑—É–ª—å—Ç–∞—Ç S –≤ –¥–µ—Å—Ç–∫–æ–≤—ñ–π —Å–∏—Å—Ç–µ–º—ñ —á–∏—Å–ª–µ–Ω–Ω—è = " << s_calculation(x,z);
-        cout << ", —Ç–∞ —É —à—ñ—Å—Ç–Ω–∞–¥—Ü—è—Ç–∫–æ–≤—ñ–π = " << hexfloat << s_calculation(x,z);
+        cout << "–ÂÁÛÎ¸Ú‡Ú ÎÓ„≥˜ÌÓ„Ó ‚Ë‡ÁÛ = " << bool(a + 7 < abs(b - 5)) << endl;
+        cout << "–ÂÁÛÎ¸Ú‡Ú S ‚ ‰ÂÒÚÍÓ‚≥È ÒËÒÚÂÏ≥ ˜ËÒÎÂÌÌˇ = " << s_calculation(x,z);
+        cout << ", Ú‡ Û ¯≥ÒÚÌ‡‰ˆˇÚÍÓ‚≥È = " << hexfloat << s_calculation(x,z);
     }
-    else cout << "–ü–æ–º–∏–ª–∫–∞! –ù–µ–≤—ñ—Ä–Ω–æ –≤–≤–µ–¥–µ–Ω—ñ –¥–∞–Ω—ñ." << endl;
-    cout << "\n–î–ª—è –∑–∞–≤–µ—Ä—à–µ–Ω–Ω—è –Ω–∞—Ç–∏—Å–Ω—ñ—Ç—å –±—É–¥—å-—è–∫—É –∫–ª–∞–≤—ñ—à—É...";
-    getchar();
+    else cout << "œÓÏËÎÍ‡! ÕÂ‚≥ÌÓ ‚‚Â‰ÂÌ≥ ‰‡Ì≥." << endl;
+    system("pause");
     return 0;
 }
 
-void copyright_info()  //–õ–æ–∫–∞–ª—ñ–∑–∞—Ü—ñ—è –¥–∞–Ω–∏—Ö
+void copyright_info()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
+    SetConsoleCP(866);
+    SetConsoleOutputCP(866);
 
-    cout << "–†–æ–∑—Ä–æ–±–Ω–∏–∫: –°—Ç—É–¥–µ–Ω—Ç –¶–ù–¢–£ —Ñ–∞–∫—É–ª—å—Ç–µ—Ç—É –∫–æ–º–ø'—é—Ç–µ—Ä–æ—ó —ñ–Ω–∂–µ–Ω–µ—Ä—ñ—ó C–µ—Ä–µ–¥–∞ –Ñ–≥–æ—Ä" << endl;
-    cout << "---------------------¬© All rights reserved--------------------------" << endl;
+    cout << "–ÓÁÓ·ÌËÍ: —ÚÛ‰ÂÌÚ ÷Õ“” Ù‡ÍÛÎ¸ÚÂÚÛ ÍÓÏÔ'˛ÚÂÓø ≥ÌÊÂÌÂ≥ø CÂÂ‰‡ ™„Ó" << endl;
+    cout << "---------------------(·) All rights reserved--------------------------" << endl;
 }
