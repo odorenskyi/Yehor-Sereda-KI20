@@ -2,7 +2,10 @@
 #include <windows.h>
 #include <iomanip>
 #include <clocale>
+#include <wchar.h>
 #include "ModulesSereda.h"
+#include <io.h>
+#include <fcntl.h>
 
 using namespace std;
 
@@ -15,26 +18,25 @@ int main()
 
     copyright_info();
 
-    cout << "Ââåä³òü ÷èñëà õ òà z." << endl;
+    wcout << L"Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ 2 Ñ‡Ð¸ÑÐ»Ð°, Ð±ÑƒÐ´ÑŒ-Ð»Ð°ÑÐºÐ°." << endl;
     if(cin >> x >> z)
     {
-        cout << "Ââåä³òü ñèìâîëè a òà b." << endl;
+        wcout << L"Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð´Ð²Ð° ÑÐ¸Ð¼Ð²Ð¾Ð»Ð° Ð´Ð»Ñ Ð¿Ð¾Ñ€Ñ–Ð²Ð½ÑÐ½Ð½Ñ" << endl;
         cin >> a >> b;
-
-        cout << "Ðåçóëüòàò ëîã³÷íîãî âèðàçó = " << bool(a + 7 < abs(b - 5)) << endl;
-        cout << "Ðåçóëüòàò S â äåñòêîâ³é ñèñòåì³ ÷èñëåííÿ = " << s_calculation(x,z);
-        cout << ", òà ó ø³ñòíàäöÿòêîâ³é = " << hexfloat << s_calculation(x,z);
+        wcout << L"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð»Ð¾Ð³Ñ–Ñ‡Ð½Ð¾Ð³Ð¾ Ð²Ð¸Ñ€Ð°Ð·Ñƒ = " << bool(a + 7 < abs(b - 5)) << endl;
+        wcout << L"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð¾Ð±Ñ‡Ð¸ÑÐ»ÐµÐ½Ð½Ñ S Ñƒ Ð´ÐµÑÑÑ‚ÐºÐ¾Ð²Ð¾Ð¼Ñƒ Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ñ–= " << s_calculation(x,z);
+        wcout << L" Ð£ ÑˆÑ–ÑÑ‚Ð½Ð°Ð´Ñ†ÑÑ‚ÐºÐ¾Ð²Ð¾Ð¼Ñƒ = " << hexfloat << s_calculation(x,z);
     }
-    else cout << "Ïîìèëêà! Íåâ³ðíî ââåäåí³ äàí³." << endl;
+    else cout << "ÐŸÐ¾Ð¼Ð¸Ð»ÐºÐ°! Ð½ÐµÐ²Ñ–Ñ€Ð½Ñ– Ð²Ñ…Ñ–Ð´Ð½Ñ– Ð´Ð°Ð½Ñ–." << endl;
     system("pause");
     return 0;
 }
 
 void copyright_info()
 {
-    SetConsoleCP(866);
-    SetConsoleOutputCP(866);
+    _wsetlocale(LC_ALL,L" ");
+    _setmode(_fileno(stdout), _O_U8TEXT);
 
-    cout << "Ðîçðîáíèê: Ñòóäåíò ÖÍÒÓ ôàêóëüòåòó êîìï'þòåðî¿ ³íæåíåð³¿ Cåðåäà ªãîð" << endl;
-    cout << "---------------------(á) All rights reserved--------------------------" << endl;
+    wcout << L"Ð Ð¾Ð·Ñ€Ð¾Ð±Ð½Ð¸Ðº Ð·Ð°ÑÑ‚Ð¾ÑÑƒÐ½ÐºÐ°: ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚ Ð¦ÐÐ¢Ð£ Ð¡ÐµÑ€ÐµÐ´Ð° Ð„Ð³Ð¾Ñ€ Ð’Ñ–Ñ‚Ð°Ð»Ñ–Ð¹Ð¾Ð²Ð¸Ñ‡" << endl;
+    wcout << L"----------------(Ñ) All rights reserved-------------------" << endl;
 }

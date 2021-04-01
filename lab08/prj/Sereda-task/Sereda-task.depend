@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1617243809 source:d:\codeblocks\yehor-sereda-ki20\lab08\prj\sereda-task\main.cpp
+1617258376 source:d:\codeblocks\yehor-sereda-ki20\lab08\prj\sereda-task\main.cpp
 	<iostream>
 	<windows.h>
 	<iomanip>
 	<clocale>
+	<wchar.h>
 	"ModulesSereda.h"
+	<io.h>
+	<fcntl.h>
 
 1616310286 d:\codeblocks\yehor-sereda-ki20\lab08\prj\sereda-task\modulessereda.h
 
