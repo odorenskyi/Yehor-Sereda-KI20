@@ -1,42 +1,47 @@
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
-#include <clocale>
 #include <wchar.h>
 #include "ModulesSereda.h"
-#include <io.h>
 #include <fcntl.h>
+#include <cmath>
 
 using namespace std;
 
 void copyright_info();
+
 
 int main()
 {
     float x, z;
     char a, b;
 
-    copyright_info();
 
-    wcout << L"Введіть 2 числа, будь-ласка." << endl;
-    if(cin >> x >> z)
+    copyright_info();
+    wcout << L"Введiть 2 числа, будь-ласка." << endl;
+    cin >> x >> z;
+    while(isnan(s_calculation(x,z)) || x == NULL || z == NULL)
     {
-        wcout << L"Введіть два символа для порівняння" << endl;
-        cin >> a >> b;
-        wcout << L"Результат логічного виразу = " << bool(a + 7 < abs(b - 5)) << endl;
-        wcout << L"Результат обчислення S у десятковому форматі= " << s_calculation(x,z);
-        wcout << L" У шістнадцятковому = " << hexfloat << s_calculation(x,z);
+        cin.clear();
+        fflush(stdin);
+        wcout << L"Помилка! невiрнi вхiднi данi. Будь-ласка, введiть числа," << endl;
+        wcout << L"перше з яких бiльше -1 та не дорiвнює 0, а друге бiльше, або дорiвнює 0" << endl;
+        cin >> x >> z;
     }
-    else cout << "Помилка! невірні вхідні дані." << endl;
+    wcout << L"Введiть два символа для порiвняння" << endl;
+    cin >> a >> b;
+    wcout << L"Результат логiчного виразу = " << bool(a + 7 < abs(b - 5)) << endl;
+    wcout << L"Результат обчислення S у десятковому форматi= " << s_calculation(x,z) << endl;
+    wcout << L"У шiстнадцятковому = " << hex << (int)s_calculation(x,z) << endl;
     system("pause");
     return 0;
 }
 
 void copyright_info()
 {
-    _wsetlocale(LC_ALL,L" ");
+    _wsetlocale(LC_ALL,L"uk_UA.UTF-8");
     _setmode(_fileno(stdout), _O_U8TEXT);
 
-    wcout << L"Розробник застосунка: студент ЦНТУ Середа Єгор Віталійович" << endl;
+    wcout << L"Розробник застосунка: студент ЦНТУ Середа Єгор Вiталiйович" << endl;
     wcout << L"----------------(с) All rights reserved-------------------" << endl;
 }
