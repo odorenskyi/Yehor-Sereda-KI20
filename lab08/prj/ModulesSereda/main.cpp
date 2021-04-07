@@ -1,6 +1,5 @@
 #include <cmath>
 #include "ModulesSereda.h"
-#define REMNANT 1000  // число, що призначене для округлення результату до тисячної частини
 
 float s_calculation(float x, float z)
 {
@@ -11,9 +10,8 @@ float s_calculation(float x, float z)
     if(x > -1 && x != 0 && z >= 0)
     {
         // формула, за якою обчислюється результат
-        S =  sqrt(z) - (sqrt(1 + x) - 3 * cos(x)) / (pow(x,2) + sin(pi * x));
-        S = (int)(S * REMNANT);            // приведення результату до тисячної частини
-        return S / REMNANT;                //
+        S =  round(sqrt(z) - (sqrt(1 + x) - 3 * cos(x)) / (pow(x,2) + sin(pi * x)));
+        return S;
     }
     else
     {
