@@ -13,8 +13,8 @@ void copyright_info();
 
 int main()
 {
-    float x, z;
-    char a, b;
+    int x, z;
+    unsigned char a, b;
 
 
     copyright_info();
@@ -30,9 +30,11 @@ int main()
     }
     wcout << L"Введiть два символа для порiвняння" << endl;
     cin >> a >> b;
-    wcout << L"Результат логiчного виразу = " << bool(a + 7 < abs(b - 5)) << endl;
-    wcout << L"Результат обчислення S у десятковому форматi= " << s_calculation(x,z) << endl;
-    wcout << L"У шiстнадцятковому = " << hex << (int)s_calculation(x,z) << endl;
+    wcout << L"Результат логiчного виразу = ";
+    wcout << bool(a + 7 < abs(b - 5)) << endl;
+    wcout << L"Перше число в шiстнадцятковiй системi= " << hex << x << endl;
+    wcout << L"Друге число в шiстнадцятковiй системi= " << hex << z << endl;
+    wcout << L"Результат обчислення S = " << s_calculation(x,z) << endl;
     system("pause");
     return 0;
 }
