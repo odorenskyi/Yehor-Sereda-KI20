@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1617965100 source:d:\programing\modulessereda\main.cpp
+	<math.h>
+	"ModulesSereda.h"
+	<iostream>
+
+1617792841 d:\programing\modulessereda\modulessereda.h
+
+1617965170 source:d:\programing\sereda-task\main.cpp
+	<iostream>
+	<math.h>
+	"ModulesSereda.h"
+	<wchar.h>
+	<fcntl.h>
+
+1617792841 d:\programing\sereda-task\modulessereda.h
+
