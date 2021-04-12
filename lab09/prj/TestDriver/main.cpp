@@ -9,14 +9,14 @@ void TestDriver(float result, float exp_result);
 
 int main()
 {
-    float x_val[] = {2500, 2500, 0, 2500, 3065, 13048, 5000, -4000, 1000, 10321, 5000,  8000, 10000};
-    float z_val[] = {3678, 3678, 3678, 0, 1480, 1480, 7000, 1000, -1480, 30421, 27000, 10000, 29999};
-    int y_val[] = {3, 5, 4, 4, 0, 6, 66, 4,  0, 6, 7, 15,  16};
+    float x_val[] = {2500, 2500, 500, 2500, 3065, 10347, 5000, 5000,  8000, 10000};
+    float z_val[] = {3678, 3678, 1275, 3000, 1480, 1480, 7000, 27000, 10000, 29999};
+    int y_val[] = {3, 5, 2, 4, 1, 6, 20, 7, 15,  16};
 
-    float exp_result1[] = {3928, 4053, -1, -1, 1480, -1, -1, -1, -1, -1, 28000, 12000, 32499};
+    float exp_result1[] = {3928, 4053, 1275, 3250, 1480, 3032.05, 8250, 28000, 12000, 32499};
 
     cout << "*income_eval funct test*" << endl;
-    for(int i = 0; i < 13; i++)
+    for(int i = 0; i < 10; i++)
     {
         float result = income_eval(x_val[i], z_val[i], y_val[i]);
         cout << i+1 << '.' << "x = " << x_val[i] << ", z = " << z_val[i] << ", y = " << y_val[i];
@@ -24,11 +24,11 @@ int main()
         cout << "Result = " << result << endl;
     }
 
-    int N[8] = {125, 3000, 3100, 1, -1, 10008000, 10008001, 213126};
-    int exp_result3[8] = {1, 5, 5, 0, -1, 10, -1, 12};
+    int N[8] = {125, 3000, 3100, 1, 10008000, 213126};
+    int exp_result3[8] = {1, 5, 5, 0, 10, 12};
 
     cout << "\n*bit_counter funct test*" << endl;
-    for(int i = 0; i < 8; i++)
+    for(int i = 0; i < 6; i++)
     {
         int result = bit_counter(N[i]);
         cout << i+1 << '.' << "N = " << N[i];
@@ -39,10 +39,10 @@ int main()
     float temp[5][6] = { {25, 32.7, 35.5, 36.7, 30.8, 29 },
                        {-3, -1, 0.5, 3.6, 3.4, 3},
                        {10, 10, 10, 10, 10, 10},
-                       {-25, 64, 100.2, 27, -17, 2},
-                       {-25, -101, -36, -57, -17, 0} };
+                       {25, 64, 99.9, 27, 17, 2},
+                       {-25, -100, -36, -57, -17, 0} };
     float exp_result2[5][2] = { {31.62, 88.916},
-        {1.08, 33.944}, {10, 50}, {0, 0}, {0, 0}};
+        {1.08, 33.944}, {10, 50}, {39.15, 102.47}, {-39.16, -38.488}};
 
     for(int i = 0; i < 5; i++)
     {
@@ -66,7 +66,7 @@ int main()
 
 void TestDriver(float result, float  exp_result)
 {
-    if(result == exp_result || (result != exp_result && exp_result == 0))
+    if(result == exp_result)
             cout  << ": Passed" << endl;
     else
             cout << ": Failed" << endl;
