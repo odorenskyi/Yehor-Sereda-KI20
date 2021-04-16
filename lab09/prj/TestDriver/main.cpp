@@ -4,7 +4,6 @@
 #include "ModulesSereda.h"
 
 using namespace std;
-
 void TestDriver(float result, float exp_result);
 
 int main()
