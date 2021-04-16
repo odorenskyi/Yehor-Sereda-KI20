@@ -25,7 +25,7 @@ int main()
     }
 
     int N[8] = {125, 3000, 3100, 1, 10008000, 213126};
-    int exp_result3[8] = {1, 5, 5, 0, 10, 12};
+    int exp_result3[8] = {1, 7, 5, 0, 14, 12};
 
     cout << "\n*bit_counter funct test*" << endl;
     for(int i = 0; i < 6; i++)
