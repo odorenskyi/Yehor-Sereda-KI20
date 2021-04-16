@@ -63,7 +63,7 @@ int bit_counter(int N)
     if(N < 0 || N > 10008000) return -1;
     else
     {
-        bool D11 = (N>>10)&1? 1: 0;
+        bool D11 = (N>>11)&1? 1: 0;
         int count_bites = 0;
         while(N != 0)
         {
