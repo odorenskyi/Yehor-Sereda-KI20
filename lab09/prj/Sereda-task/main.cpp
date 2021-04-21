@@ -168,7 +168,7 @@ void input_funct4()
         clean_input();
     }
     if(bit_counter(N) != -1)
-        wcout << L"Результат = " << bit_counter(N) << endl;
+        wcout << L"Результат  пiдрахунку кiлькостi нулiв, або одиниць = " << bit_counter(N) << endl;
     else
     {
         wcout << L"Помилка, невалiднi вхiднi данi для роботи функцiї. Будь-ласка спробуйте ще раз." << endl;
