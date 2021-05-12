@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1312551290 source:d:\codeblocks\modulessereda\main.c
+
+1617425901 source:d:\codeblocks\modulessereda\main.cpp
+	<cmath>
+	"ModulesSereda.h"
+
+1617425901 d:\codeblocks\modulessereda\modulessereda.h
+
+1617792762 source:d:\programing\modulessereda\main.cpp
+	<cmath>
+	<math.h>
+	"ModulesSereda.h"
+
+1617792841 d:\programing\modulessereda\modulessereda.h
+
+1620648945 source:d:\programing\yehor-sereda-ki20\lab10\prj\modulessereda\main.cpp
+	<math.h>
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<wchar.h>
+	<fcntl.h>
+	<codecvt>
+	<clocale>
+	<sstream>
+	<chrono>
+	<bitset>
+
+1620321821 d:\programing\yehor-sereda-ki20\lab10\prj\modulessereda\modulessereda.h
+
