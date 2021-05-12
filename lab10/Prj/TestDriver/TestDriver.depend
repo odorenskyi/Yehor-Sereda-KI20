@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1620649015 source:d:\programing\yehor-sereda-ki20\lab10\prj\testdriver\main.cpp
+	<math.h>
+	"ModulesSereda.h"
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<wchar.h>
+	<fcntl.h>
+	<codecvt>
+	<clocale>
+	<sstream>
+	<chrono>
+	<bitset>
+
+1620647197 d:\programing\yehor-sereda-ki20\lab10\prj\testdriver\modulessereda.h
+
+1620648945 source:d:\programing\yehor-sereda-ki20\lab10\prj\modulessereda\main.cpp
+	<math.h>
+	<iostream>
+	<cstdlib>
+	<fstream>
+	<wchar.h>
+	<fcntl.h>
+	<codecvt>
+	<clocale>
+	<sstream>
+	<chrono>
+	<bitset>
+
+1620321821 d:\programing\yehor-sereda-ki20\lab10\prj\modulessereda\modulessereda.h
+
